@@ -12,6 +12,8 @@
 		AA6177951EC2CC79001F5C29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6177931EC2CC79001F5C29 /* Main.storyboard */; };
 		AA6177971EC2CC79001F5C29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA6177961EC2CC79001F5C29 /* Assets.xcassets */; };
 		AA61779A1EC2CC79001F5C29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6177981EC2CC79001F5C29 /* LaunchScreen.storyboard */; };
+		AA6177A61EC33A69001F5C29 /* FirstCustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6177A51EC33A69001F5C29 /* FirstCustomTableViewController.swift */; };
+		AA6177A81EC35214001F5C29 /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6177A71EC35214001F5C29 /* FirstTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		AA6177961EC2CC79001F5C29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA6177991EC2CC79001F5C29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA61779B1EC2CC79001F5C29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA6177A51EC33A69001F5C29 /* FirstCustomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCustomTableViewController.swift; sourceTree = "<group>"; };
+		AA6177A71EC35214001F5C29 /* FirstTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				AA6177961EC2CC79001F5C29 /* Assets.xcassets */,
 				AA6177981EC2CC79001F5C29 /* LaunchScreen.storyboard */,
 				AA61779B1EC2CC79001F5C29 /* Info.plist */,
+				AA6177A51EC33A69001F5C29 /* FirstCustomTableViewController.swift */,
+				AA6177A71EC35214001F5C29 /* FirstTableViewCell.swift */,
 			);
 			path = SimpleTablePractice;
 			sourceTree = "<group>";
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA6177921EC2CC79001F5C29 /* ViewController.swift in Sources */,
+				AA6177A61EC33A69001F5C29 /* FirstCustomTableViewController.swift in Sources */,
+				AA6177A81EC35214001F5C29 /* FirstTableViewCell.swift in Sources */,
 				AA6177901EC2CC79001F5C29 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +312,7 @@
 				AA6177A01EC2CC79001F5C29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
