@@ -18,6 +18,20 @@ class FirstCustomTableViewController: UITableViewController {
     
     var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian / Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowCustomDetailSegue"{
+            if let dvc = segue.destination as? RestaurantDetailViewController{
+                if let SelectRow = tableView.indexPathForSelectedRow?.row{
+                    dvc.infoFromViewOneImage = restaurantImages[SelectRow]
+                    dvc.infoFromViewOneName = restaurantLocations[SelectRow]
+                    dvc.infoFromViewOneLocal = restaurantNames[SelectRow]
+                    dvc.infoFromViewOneType = restaurantTypes[SelectRow]
+                }
+            }
+        }
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
