@@ -14,8 +14,6 @@ class SecondTableViewCell: UITableViewCell {
     @IBOutlet weak var myName: UILabel!
     @IBOutlet weak var myLocation: UILabel!
     @IBOutlet weak var myType: UILabel!
-
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()

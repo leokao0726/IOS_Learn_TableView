@@ -64,11 +64,39 @@ class SecondCustomTableTableViewController: UITableViewController {
             return cell
         }
     }
-//    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
-// 
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alertController = UIAlertController(title: "Restaurant Details", message: "What do you wanna do ?", preferredStyle: .actionSheet)
+        
+        let callActionHandler = {
+            (action:UIAlertAction!) -> Void in
+            let message = UIAlertController(title: "Service Unvailable", message: "Sorry for the number is not available yet", preferredStyle: .alert)
+            message.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
+            
+            self.present(message, animated: true, completion: nil)
+            
+        }
+        
+        let isVisitedAction = UIAlertAction(title: "I've been there", style: .default) {
+            (action:UIAlertAction) in
+            
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.accessoryType = .checkmark
+        }
+        
+        let callAction = UIAlertAction(title: "Call" + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
+        
+        let action = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        
+        alertController.addAction(isVisitedAction)
+        alertController.addAction(action)
+        alertController.addAction(callAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
+ 
 
     /*
     // Override to support conditional editing of the table view.

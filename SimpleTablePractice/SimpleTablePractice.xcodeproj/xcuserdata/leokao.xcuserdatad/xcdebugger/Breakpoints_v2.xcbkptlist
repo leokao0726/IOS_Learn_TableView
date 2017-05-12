@@ -26,7 +26,7 @@
                   moduleName = "SimpleTablePractice"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/leokao/IOS_Learn_TablePractice/SimpleTablePractice/SimpleTablePractice/ViewController.swift"
-                  timestampString = "516194750.374791"
+                  timestampString = "516271594.934757"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -41,7 +41,7 @@
                   moduleName = "SimpleTablePractice"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/leokao/IOS_Learn_TablePractice/SimpleTablePractice/SimpleTablePractice/ViewController.swift"
-                  timestampString = "516194750.376444"
+                  timestampString = "516271594.938042"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -56,7 +56,7 @@
                   moduleName = "SimpleTablePractice"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/leokao/IOS_Learn_TablePractice/SimpleTablePractice/SimpleTablePractice/ViewController.swift"
-                  timestampString = "516194750.377952"
+                  timestampString = "516271594.941813"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -71,7 +71,7 @@
                   moduleName = "SimpleTablePractice"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/leokao/IOS_Learn_TablePractice/SimpleTablePractice/SimpleTablePractice/ViewController.swift"
-                  timestampString = "516194750.379534"
+                  timestampString = "516271594.945785"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -86,7 +86,7 @@
                   moduleName = "SimpleTablePractice"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/leokao/IOS_Learn_TablePractice/SimpleTablePractice/SimpleTablePractice/ViewController.swift"
-                  timestampString = "516194750.381034"
+                  timestampString = "516271594.948021"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -110,6 +110,22 @@
             endingLineNumber = "65"
             landmarkName = "ViewController"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SimpleTablePractice/SecondCustomTableTableViewController.swift"
+            timestampString = "516272127.407875"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
