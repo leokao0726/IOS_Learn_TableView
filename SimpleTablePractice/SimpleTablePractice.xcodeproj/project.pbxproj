@@ -15,6 +15,8 @@
 		AA6177A61EC33A69001F5C29 /* FirstCustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6177A51EC33A69001F5C29 /* FirstCustomTableViewController.swift */; };
 		AA6177A81EC35214001F5C29 /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6177A71EC35214001F5C29 /* FirstTableViewCell.swift */; };
 		AA6177AC1EC47650001F5C29 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6177AB1EC47650001F5C29 /* RestaurantDetailViewController.swift */; };
+		AA6177AE1EC59ECB001F5C29 /* SecondCustomTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6177AD1EC59ECB001F5C29 /* SecondCustomTableTableViewController.swift */; };
+		AA6177B01EC59EEA001F5C29 /* SecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6177AF1EC59EEA001F5C29 /* SecondTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		AA6177A51EC33A69001F5C29 /* FirstCustomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCustomTableViewController.swift; sourceTree = "<group>"; };
 		AA6177A71EC35214001F5C29 /* FirstTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
 		AA6177AB1EC47650001F5C29 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
+		AA6177AD1EC59ECB001F5C29 /* SecondCustomTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondCustomTableTableViewController.swift; sourceTree = "<group>"; };
+		AA6177AF1EC59EEA001F5C29 /* SecondTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				AA6177A51EC33A69001F5C29 /* FirstCustomTableViewController.swift */,
 				AA6177A71EC35214001F5C29 /* FirstTableViewCell.swift */,
 				AA6177AB1EC47650001F5C29 /* RestaurantDetailViewController.swift */,
+				AA6177AD1EC59ECB001F5C29 /* SecondCustomTableTableViewController.swift */,
+				AA6177AF1EC59EEA001F5C29 /* SecondTableViewCell.swift */,
 			);
 			path = SimpleTablePractice;
 			sourceTree = "<group>";
@@ -147,9 +153,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA6177921EC2CC79001F5C29 /* ViewController.swift in Sources */,
+				AA6177AE1EC59ECB001F5C29 /* SecondCustomTableTableViewController.swift in Sources */,
 				AA6177A61EC33A69001F5C29 /* FirstCustomTableViewController.swift in Sources */,
 				AA6177AC1EC47650001F5C29 /* RestaurantDetailViewController.swift in Sources */,
 				AA6177A81EC35214001F5C29 /* FirstTableViewCell.swift in Sources */,
+				AA6177B01EC59EEA001F5C29 /* SecondTableViewCell.swift in Sources */,
 				AA6177901EC2CC79001F5C29 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

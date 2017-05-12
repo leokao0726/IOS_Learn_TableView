@@ -246,19 +246,70 @@
         <!--Custom TableView2-->
         <scene sceneID="3dr-PT-aes">
             <objects>
-                <tableViewController id="L3V-du-3ht" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="L4Q-vA-gOb">
+                <tableViewController id="L3V-du-3ht" customClass="SecondCustomTableTableViewController" customModule="SimpleTablePractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="L4Q-vA-gOb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xtN-IJ-mhT">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondCell" id="xtN-IJ-mhT" customClass="SecondTableViewCell" customModule="SimpleTablePractice" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xtN-IJ-mhT" id="meh-gZ-JeD">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qRI-4X-hA2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="149.5" id="UDF-KA-Z4M"/>
+                                                <constraint firstAttribute="width" constant="375" id="f0Z-2v-0JM"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gRp-kx-Pi9">
+                                            <rect key="frame" x="8" y="44" width="359" height="61.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyc-k5-7qL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="18.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEl-4j-rGm">
+                                                    <rect key="frame" x="0.0" y="18.5" width="359" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PG-Yj-goe">
+                                                    <rect key="frame" x="0.0" y="40" width="359" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="gRp-kx-Pi9" secondAttribute="bottom" constant="36" id="10m-XH-AOx"/>
+                                        <constraint firstItem="qRI-4X-hA2" firstAttribute="centerY" secondItem="meh-gZ-JeD" secondAttribute="centerY" id="RGR-AT-gRN"/>
+                                        <constraint firstItem="gRp-kx-Pi9" firstAttribute="leading" secondItem="meh-gZ-JeD" secondAttribute="leadingMargin" id="bJ2-uR-X1F"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="gRp-kx-Pi9" secondAttribute="trailing" id="bzl-il-awq"/>
+                                        <constraint firstItem="gRp-kx-Pi9" firstAttribute="centerY" secondItem="meh-gZ-JeD" secondAttribute="centerY" id="fOa-fA-Fno"/>
+                                        <constraint firstItem="gRp-kx-Pi9" firstAttribute="top" secondItem="meh-gZ-JeD" secondAttribute="topMargin" constant="36" id="hDC-Tw-DQb"/>
+                                        <constraint firstItem="gRp-kx-Pi9" firstAttribute="centerX" secondItem="meh-gZ-JeD" secondAttribute="centerX" id="m7R-gy-NKj"/>
+                                        <constraint firstItem="qRI-4X-hA2" firstAttribute="centerX" secondItem="meh-gZ-JeD" secondAttribute="centerX" id="x2M-PP-Iww"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="myImageView" destination="qRI-4X-hA2" id="haY-U6-SW2"/>
+                                    <outlet property="myLocation" destination="MEl-4j-rGm" id="bU0-0o-F5l"/>
+                                    <outlet property="myName" destination="lyc-k5-7qL" id="GAF-Vk-Lcy"/>
+                                    <outlet property="myType" destination="8PG-Yj-goe" id="u9S-bb-ji0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
