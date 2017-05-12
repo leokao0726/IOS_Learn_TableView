@@ -10,6 +10,7 @@ import UIKit
 
 class SecondCustomTableTableViewController: UITableViewController {
     
+    var restaurantIsVisited = [Bool](repeating: false, count:21)
     
     var restaurantNames = ["Cafe Deadend", "Homei", "Teakha", "Cafe Loisl", "Petite Oyster", "For Kee Restaurant", "Po's Atelier", "Bourke Street Bakery", "Haigh's Chocolate", "Palomino Espresso", "Upstate", "Traif", "Graham Avenue Meats", "Waffle & Wolf", "Five Leaves", "Cafe Lore", "Confessional", "Barrafina", "Donostia", "Royal Oak", "CASK Pub and Kitchen"]
     
@@ -49,7 +50,13 @@ class SecondCustomTableTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         if let cell = tableView.dequeueReusableCell(withIdentifier: "secondCell", for: indexPath) as? SecondTableViewCell{
+            
+            cell.accessoryType = restaurantIsVisited[indexPath.row] ? .checkmark : .none
+            
+            //check the row is selected or not
+            //this is used to solve the dequeueReusableCell will reuse problem
             
             cell.myImageView.image = UIImage(named: restaurantImages[indexPath.row])
             cell.myName.text = restaurantNames[indexPath.row]
@@ -59,6 +66,13 @@ class SecondCustomTableTableViewController: UITableViewController {
         }else{
             //default
             let cell = UITableViewCell()
+            
+            if restaurantIsVisited[indexPath.row]{
+                cell.accessoryType = .checkmark
+            }else{
+                cell.accessoryType = .none
+            }
+            
             cell.textLabel?.text = restaurantNames[indexPath.row]
             cell.imageView?.image = UIImage(named: restaurantImages[indexPath.row])
             return cell
@@ -77,11 +91,24 @@ class SecondCustomTableTableViewController: UITableViewController {
             
         }
         
-        let isVisitedAction = UIAlertAction(title: "I've been there", style: .default) {
+        var isVisitedTitle:String = "Add this select"
+        if restaurantIsVisited[indexPath.row]{
+           isVisitedTitle = "Delete select"
+        }
+
+        let isVisitedAction = UIAlertAction(title: isVisitedTitle , style: .default) {
             (action:UIAlertAction) in
             
             let cell = tableView.cellForRow(at: indexPath)
-            cell?.accessoryType = .checkmark
+            
+            if self.restaurantIsVisited[indexPath.row]{
+                cell?.accessoryType = .none
+                self.restaurantIsVisited[indexPath.row] = false
+            }else{
+                cell?.accessoryType = .checkmark
+                self.restaurantIsVisited[indexPath.row] = true
+            }
+            //check for whether user checked the row or not
         }
         
         let callAction = UIAlertAction(title: "Call" + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
