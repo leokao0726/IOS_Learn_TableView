@@ -89,25 +89,57 @@ class FirstCustomTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: false)
     }
 
-    /*
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let shareAction = UITableViewRowAction(style: .default, title: "Share") { (action, IndexPath) in
+            
+            let defaultText = "Check in at " + self.restaurantNames[indexPath.row]
+            if let imageToShare = UIImage(named: self.restaurantImages[indexPath.row]){
+                let activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
+                self.present(activityController, animated: true, completion: nil)
+            }
+        }
+        //cannot show the defaultText ?
+        
+        let deleteAction = UITableViewRowAction(style: .default, title: "Delete") { (action, IndexPath) in
+            self.restaurantNames.remove(at: indexPath.row)
+            self.restaurantLocations.remove(at: indexPath.row)
+            self.restaurantTypes.remove(at: indexPath.row)
+            self.restaurantImages.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        
+        shareAction.backgroundColor = UIColor(red: 28.0/255.0, green: 165.0/255.0, blue: 253.0/255.0, alpha: 1.0)
+        deleteAction.backgroundColor = UIColor(red: 202.0/255.0, green: 202.0/255.0, blue: 203.0/255.0, alpha: 1.0)
+        
+        return [deleteAction,shareAction]
+    }
+    
     // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
+//    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        
+//        
+//        return true
+//    }
 
-    /*
+    
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            // Delete the row from the data source
+//            restaurantNames.remove(at: indexPath.row)
+//            restaurantLocations.remove(at: indexPath.row)
+//            restaurantTypes.remove(at: indexPath.row)
+//            restaurantImages.remove(at: indexPath.row)
+//            //it needs to delete all the data source frome the cell
+//            
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+//        } else if editingStyle == .insert {
+//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+//        }
+//        tableView.reloadData()
+//    }
 
     /*
     // Override to support rearranging the table view.
